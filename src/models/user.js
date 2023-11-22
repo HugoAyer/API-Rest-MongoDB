@@ -15,5 +15,29 @@ const userSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', userSchema);
+const usersCompanies = mongoose.Schema({
+    code: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    pass: {
+        type: String,
+        required: true
+    },
+    type: {
+        type: Number,
+        required: true,
+    },
+    status: {
+        type: String,
+        required: true
+    }
+});
+
+//module.exports = mongoose.model('users', userSchema);
+module.exports = mongoose.model('users', usersCompanies);
 //Esto se hace para crear el modelo de datos y exportarlo
