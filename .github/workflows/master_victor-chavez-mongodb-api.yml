@@ -59,4 +59,4 @@ jobs:
           app-name: 'Victor-Chavez-MongoDB-Api'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_725C8FB0193745DDB82384475799B445 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_198A9F41747D4300A5C900D3245E3869 }}
