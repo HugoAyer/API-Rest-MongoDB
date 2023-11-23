@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 require("dotenv").config(); //Con esto, mando llamar las variables de ambiente que definí en el archivo .env
 const userRoutes = require("./routes/user"); //importo todas las funciones que definí en el archivo user
 
+var ip = require("ip");
+console.log(ip.address());
+
 const app = express();
 const port = process.env.PORT || 9000; //PORT es una variable de ambiente propiedad de express
 
@@ -11,7 +14,7 @@ app.use(express.json());
 app.use('/api',userRoutes); //Esto del middleare sirve para que en automático se anteponga "api" a la ruta de todos los endPoints
 
 app.get('/', (req, res) => {
-    res.send('Welcome to this, my api:' + process.env.MONGODB_URI);
+    res.send('Welcome to this, my api:' + ip.address());
 
 });
 
